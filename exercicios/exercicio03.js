@@ -1,11 +1,10 @@
 let input = require('prompt-sync')();
 
-let numeros = 0;
 let totalNegativos = 0;
 
-for (let index = 0; index <= 10; index++) {
+for (let index = 0; index < 10; index++) {
     
-    numeros = Number(input('Informe o ' + index + 'º ' + 'número: '))
+    let numeros = Number(input('Informe o ' + (index+1) + 'º ' + 'número: '))
 
     if (numeros < 0) {
         

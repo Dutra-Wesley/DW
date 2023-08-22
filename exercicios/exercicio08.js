@@ -23,4 +23,4 @@ for (let index = 0; index < notasAlunos.length; index++) {
     
 }
 
-console.log('No total ' + contagem + ' alunos ficaram acima da média da geral da turma')
+console.log('A média da turma foi ' + mediaTurma + ' e no total ' + contagem + ' alunos ficaram acima da média')

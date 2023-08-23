@@ -16,7 +16,7 @@ for (let index = 0; index < nomes.length; index++) {
 
 console.log('--')
 
-for (let index = 9; index >= 0; index--) {
+for (let index = nomes.length - 1; index >= 0; index--) {
     
     console.log(nomes[index])
     

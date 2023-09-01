@@ -11,8 +11,8 @@ do {
     console.log('4 - TRIÂNGULO')
     
     let calcular = Number(input('Qual figura geométrica deseja calcular a área?: '))
-    let base =0;
-    let altura =0;
+    let base = 0;
+    let altura = 0;
     let calcularArea = 0;
 
     switch (calcular) {
@@ -37,8 +37,8 @@ do {
         case 3:
             
             let raio = input('Informe o raio do circulo: ')
-            calcularArea = raio * raio
-            console.log("π" + calcularArea)
+            calcularArea = Math.PI * raio * raio
+            console.log(calcularArea.toFixed(2))
 
             break;
 

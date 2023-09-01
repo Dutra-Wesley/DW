@@ -7,11 +7,11 @@ imprimirArray(arrayNumeros)
 
 function imprimirArray(arrayNumeros) {
     
-    for (let index = 0; index < arrayNumeros.length; index++) {
+    for (const indice in arrayNumeros) {
         
-        if (arrayNumeros[index] %2 === 0) {
+        if (arrayNumeros[indice] %2 === 0) {
             
-            console.log(index)
+            console.log(indice)
 
         }
 

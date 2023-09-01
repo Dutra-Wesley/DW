@@ -20,8 +20,8 @@ if (paisA > paisB) {
 
 while (paisA < paisB) {
     
-    paisA += (paisA * taxaCrescimentoA)
-    paisB += (paisB * taxaCrescimentoB)
+    paisA += Math.floor(paisA * (taxaCrescimentoA / 100))
+    paisB += Math.floor(paisB * (taxaCrescimentoB / 100))
     anosParaUltrapassar++
 
 }

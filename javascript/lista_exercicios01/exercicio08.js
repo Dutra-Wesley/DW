@@ -20,22 +20,14 @@ for (let index = 0; index < 5; index++) {
 
 }
 
-const tituloOrdenado = livros.map(e => e).sort((a, b) =>
-    a.titulo.localeCompare(b.titulo))
-
+const tituloOrdenado = livros.map(e => e).sort((a, b) => a.titulo.localeCompare(b.titulo))
 console.log(tituloOrdenado)
 console.log(tituloOrdenado.reverse())
 
-const autorOrdenado = livros.map(e => e).sort((a, b) =>
-    a.autor.localeCompare(b.autor))
-
-
+const autorOrdenado = livros.map(e => e).sort((a, b) => a.autor.localeCompare(b.autor))
 console.log(autorOrdenado)
 console.log(autorOrdenado.reverse())
 
-const anoOrdenado = livros.map(e => e).sort((a, b) =>
-    a.ano.toString().localeCompare(b.ano))
-
-
+const anoOrdenado = livros.map(e => e).sort((a, b) => a.ano.toString().localeCompare(b.ano))
 console.log(anoOrdenado)
 console.log(anoOrdenado.reverse())

@@ -3,33 +3,30 @@ let input = require('prompt-sync')();
 let arrayNumeros = preencherArray()
 
 let totalElementos = contabilizarTotalArray(arrayNumeros)
-let totalImpares = contabilizarImparesArray(arrayNumeros)
 console.log('Total de elementos na array: ' + totalElementos)
-console.log('Total de números ímpares: ' + totalImpares)
+contabilizarImparesArray(arrayNumeros)
 
 function contabilizarImparesArray(arrayNumeros) {
-    let totalImpares = 0;
 
-    for (let index = 0; index < arrayNumeros.length; index++) {
-        
-        if (arrayNumeros[index] %2 !== 0 ) {
+   for (const elemento of arrayNumeros) {
+    
+    if (elemento %2 !== 0 ) {
      
-            totalImpares++
-    
-        }
-        
+       console.log(elemento)
+
     }
+
+   }
     
-    return totalImpares
 }
 
 function contabilizarTotalArray(arrayNumeros) {
     let totalElementos = 0;
 
-    for (let index = 0; index < arrayNumeros.length; index++) {
-        
-        totalElementos += arrayNumeros[index]
-        
+    for (const elemento of arrayNumeros) {
+      
+        totalElementos += elemento
+
     }
     return totalElementos
 }

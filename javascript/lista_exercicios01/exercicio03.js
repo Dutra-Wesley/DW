@@ -15,7 +15,6 @@ if (paisA > paisB) {
 } else if (taxaCrescimentoA < taxaCrescimentoB) {
     
     console.log('A taxa de crescimento do páis A é menor que a do país B, logo ele nunca será ultrapassado!!')
-
 }
 
 while (paisA < paisB) {
@@ -23,7 +22,6 @@ while (paisA < paisB) {
     paisA += Math.floor(paisA * (taxaCrescimentoA / 100))
     paisB += Math.floor(paisB * (taxaCrescimentoB / 100))
     anosParaUltrapassar++
-
 }
 
 console.log('Levará ' + anosParaUltrapassar + ' anos para o país A ultrapassar o país B')

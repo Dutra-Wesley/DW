@@ -11,12 +11,9 @@ function imprimirArray(arrayNumeros) {
         
         if (arrayNumeros[indice] %2 === 0) {
             
-            console.log(indice)
-
+            console.log('Indice: ' + indice + ' | Número armazenado: ' + arrayNumeros[indice])
         }
-
     }
-
 }
 
 function preencherArray(totalNumeros) {
@@ -26,8 +23,6 @@ function preencherArray(totalNumeros) {
     for (let index = 0; index < totalNumeros; index++) {
         
         arrayNumeros[index] = Number(input('Informe o ' + (index+1) + 'º valor: '))
-        
     }
-    
     return arrayNumeros
 }

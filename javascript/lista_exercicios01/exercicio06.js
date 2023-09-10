@@ -1,35 +1,47 @@
 let input = require('prompt-sync')();
 
 let arrayTarefas = []
-let resposta = ''
+let opcao = '';
 
 do {
     
+    console.log('-----------------------')
     console.log('1 - ADICIONAR TAREFA')
     console.log('2 - REMOVER TAREFA')
     console.log('3 - LISTAR TAREFAS')
+    console.log('4 - ENCERRAR O PROGRAMA')
+    console.log('-----------------------')
 
-    let opcao = Number(input('Informe a opção desejada: '))
+    opcao = Number(input('Informe a opção desejada: '))
 
     switch (opcao) {
         case 1:
             
-             let novaTarefa = input('Informe que tarefa deseja adicionar: ')
-             arrayTarefas.push(novaTarefa.toLocaleUpperCase())
+            let novaTarefa = input('Informe a nova tarefa que deseja adicionar: ')
+            novaTarefa.toLocaleUpperCase()
+            let indexTarefaRepetida = arrayTarefas.indexOf(novaTarefa)
+
+            if (indexTarefaRepetida === -1) {
+                
+                arrayTarefas.push(novaTarefa)
+
+            } else {
+
+                console.log('Tarefa já existente na lista!')
+            }
 
             break;
             
         case 2:
                 
             let removerTarefa = input('Informe que tarefa deseja remover: ')
-            let indexParaExcluir = arrayTarefas.indexOf(removerTarefa.toLocaleUpperCase())
+            removerTarefa.toLocaleUpperCase()
+            let indexParaExcluir = arrayTarefas.indexOf(removerTarefa)
             
             if (indexParaExcluir !== -1) {
-                
                 arrayTarefas.splice(indexParaExcluir, 1)
                 console.log('Tarefa: ' + removerTarefa + ' removida!')
             } else {
-
                 console.log('Tarefa: ' + removerTarefa + ' não encontrada no array!')
             }
 
@@ -40,9 +52,13 @@ do {
             for (const tarefas of arrayTarefas) {
                 
                 console.log(tarefas.toLocaleUpperCase())
-
             }
 
+            break;
+
+        case 4:
+
+            console.log('PROGRAMA ENCERRADO!')
             break;
 
         default:
@@ -51,6 +67,4 @@ do {
             break;
     }
 
-    resposta = input('Deseja fazer outra alteração? Caso contrário o programa será finalizado! SIM OU NÃO: ')
-
-} while (resposta.toLocaleUpperCase() === 'SIM');
+} while (opcao !== 4);

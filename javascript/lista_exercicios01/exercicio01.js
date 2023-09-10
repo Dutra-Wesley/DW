@@ -1,6 +1,6 @@
 let input = require('prompt-sync')();
 
-let resposta = ''
+let resposta = '';
 
 do {
     

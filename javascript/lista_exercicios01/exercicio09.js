@@ -14,11 +14,9 @@ for (let index = 0; index < 5; index++) {
         nome: nome,
         idade: idade,
         media: media,
-
     }
 
     alunos.push(aluno)
-
 }
 
 let somaMedia = 0
@@ -34,7 +32,7 @@ let alunoMaisVelho = {
     idade: 0,
 }
 
-// FOR PARA IDENTIFICAR SOMA DA MÉDIA DOS ALUNOS, ALUNO MAIS NOVO E ALUNO MAIS VELHO
+// IDENTIFICANDO A SOMA DA MÉDIA DOS ALUNOS, ALUNO MAIS NOVO E ALUNO MAIS VELHO
 for (let index = 0; index < alunos.length; index++) {
     
     somaMedia += alunos[index].media
@@ -44,7 +42,6 @@ for (let index = 0; index < alunos.length; index++) {
         alunoMaisNovo.idade = alunos[index].idade
         alunoMaisNovo.nome = alunos[index].nome
         alunoMaisNovoIdade = alunos[index].idade
-
     }
     
     if (alunos[index].idade > alunoMaisVelhoIdade) {
@@ -52,9 +49,7 @@ for (let index = 0; index < alunos.length; index++) {
         alunoMaisVelho.idade = alunos[index].idade
         alunoMaisVelho.nome = alunos[index].nome
         alunoMaisVelhoIdade = alunos[index].idade
-
     }
-
 }
 
 const mediaTurma = somaMedia / alunos.length
@@ -62,13 +57,11 @@ console.log('Média da turma é: ' + mediaTurma)
 console.log('O aluno mais novo é: ' + alunoMaisNovo.nome + ' sua idade é: ' + alunoMaisNovo.idade)
 console.log('O aluno mais velho é: ' + alunoMaisVelho.nome + ' sua idade é: ' + alunoMaisVelho.idade)
 
-// FOR PARA SABER QUAIS ALUNOS FICARAM A BAIXO DA MÉDIA DA TURMA
+// QUAIS ALUNOS FICARAM A BAIXO DA MÉDIA DA TURMA
 for (let index = 0; index < alunos.length; index++) {
     
     if (alunos[index].media < mediaTurma) {
         
         console.log('O aluno ' + alunos[index].nome + ' ficou abaixo da média da turma!')
-
     }
-    
 }

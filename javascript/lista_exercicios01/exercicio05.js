@@ -4,28 +4,26 @@ let arrayNumeros = preencherArray()
 
 let totalElementos = contabilizarTotalArray(arrayNumeros)
 console.log('Total de elementos na array: ' + totalElementos)
+
 contabilizarImparesArray(arrayNumeros)
 
 function contabilizarImparesArray(arrayNumeros) {
 
-   for (const elemento of arrayNumeros) {
+   for (const numero of arrayNumeros) {
     
-    if (elemento %2 !== 0 ) {
+    if (numero %2 !== 0 ) {
      
-       console.log(elemento)
-
+       console.log(numero)
     }
-
    }
-    
 }
 
 function contabilizarTotalArray(arrayNumeros) {
     let totalElementos = 0;
 
-    for (const elemento of arrayNumeros) {
+    for (const numero of arrayNumeros) {
       
-        totalElementos += elemento
+        totalElementos += numero
 
     }
     return totalElementos

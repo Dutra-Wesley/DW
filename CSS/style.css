@@ -39,14 +39,110 @@ body{
     padding: 10px 0px;
 }
 
+.contato h2:hover, .interesses h2:hover, .referencias h2:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.contato p, .referencias p, .educacao p, .profissional p, .projetos p{
+    margin: 10px 25px;
+}
+
+.interesses li {
+    margin: 10px 25px;
+    text-align: justify;
+}
+
+.referencias p {
+    margin: 10px 25px;
+    text-align: justify;
+}
+
 /*------------------------------------
             /PRINCIPAL
 ------------------------------------*/
 
-.principal{
+.principal {
     background-color: var(--cor-principal);
     margin: 50px 0px;
     padding: 30px 0px 0px 50px;
     width: 100%;
     font-family: 'Inclusive Sans', sans-serif;
+}
+
+.tecnica, .pessoal, .profissional, .educacao, .certificacao, .projetos, .idioma {
+    padding: 10px 0px 20px 0px;
+}
+
+.titulo {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte);
+    font-family: 'Mooli', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.tecnica ul, .profissional ul, .certificacao ul {
+    padding: 15px 0px 15px 50px;
+}
+
+.pessoal ol {
+    padding: 15px 0px 15px 50px;
+}
+
+table {
+    margin: 30px 0px 0px 20px;
+    border: 2px solid var(--cor-linha-tabela);
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: var(--cor-secundaria);
+}
+
+thead th:nth-child(1) {
+    width: 20%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 20%;
+}
+
+thead th:nth-child(4) {
+    width: 20%;
+}
+
+thead th:nth-child(5) {
+    width: 20%;
+}
+
+thead {
+    color: var(--cor-fonte);
+}
+
+th, td {
+    padding: 5px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--cor-principal);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cor-secundaria);
+}
+
+.imagem {
+    margin: 5px 15px 5px 10px;
 }
